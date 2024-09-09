@@ -1,11 +1,11 @@
 'use client'
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { createContext, useEffect, useState } from "react";
 import { ProfileData } from "./ProfileData";
-import { profileData } from "@/types/index.types";
 
 export const Context : any = createContext([]);
 export default function Provider(props: any){
-    let [value, setValue] = useState([]);
+    const [value, setValue] = useState([]);
     useEffect(()=>{
         ProfileData().then((data)=>{
             console.log(data);

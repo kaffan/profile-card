@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Avatar } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 
@@ -5,8 +6,9 @@ export const Comment = () => {
   const arr = [0, 0, 0, 0];
   return (
     <>
-      {arr.map((ele: any) => (
+      {arr.map((ele: number, i : number) => (
         <Grid
+          key={i}
           container
           direction="row"
           spacing="2em"
